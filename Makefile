@@ -37,8 +37,7 @@ llvm_update:
 configure:
 	
 	@echo "*** Configuring LLVM"
-	@echo $(_INSTALL_DIR)
-	@cd build && cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=$(abspath .)/dist -DLLVM_ENABLE_PROJECTS=$(PROJECTS) -DLLVM_TARGETS_TO_BUILD=$(TARGETS) ../source/llvm-project/llvm
+	@cd build && cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=/usr/local/llvm -DLLVM_ENABLE_PROJECTS=$(PROJECTS) -DLLVM_TARGETS_TO_BUILD=$(TARGETS) ../source/llvm-project/llvm
 
 build:
 	
